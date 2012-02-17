@@ -1,0 +1,9 @@
+before_script:
+  - uname -a 
+  - cat /etc/lsb-release
+  - sudo apt-get install haskell-platform
+  - cabal install pandoc
+
+rvm:
+  - 1.9.3
+script: pandoc -v
