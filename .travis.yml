@@ -6,7 +6,8 @@ before_script:
   - cabal install cabal-install
   - cabal install json-0.4.4
   - cabal install pandoc
+  - export PATH=~/.cabal/bin:$PATH
 
 rvm:
   - 1.9.3
-script: pandoc -v
+script: find ~/.cabal/bin; pandoc -v
